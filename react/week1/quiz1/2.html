@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="filter()">Filtered Array</button>
+    <div id="list"></div>
+
+    <script>
+        const unfilteredArray = [
+            {
+                name: 'Bejo',
+                isAllowed: true
+            },
+            {
+                name: 'Jhonson',
+                isAllowed: false
+            },
+            {
+                name: 'Juara',
+                isAllowed: true
+            },
+            {
+                name: 'Panco',
+                isAllowed: false
+            },
+            {
+                name: 'Nasional',
+                isAllowed: true
+            }
+        ]
+
+        var hasil = ""
+        unfilteredArray.forEach(value=>hasil += value.name +" ");
+
+        document.getElementById("list").innerHTML=hasil;
+
+        function filter(){
+            let bejoJuaraNasional = unfilteredArray.filter(value => value.isAllowed)
+            let hasil = "";
+            bejoJuaraNasional.forEach(value=>hasil += value.name +" ");
+            document.getElementById("list").innerHTML=hasil;
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSytM2ETsim8ykxzIRdlKtylEoBLzY0m45izNxORUaGJk9DR5tk&usqp=CAU">
+    <title>Form Pengajuan Cuti</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js" charset="UTF-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js" charset="UTF-8"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+  </head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        ReactDOM.render(
+                <form>
+                    <h1>Form Pengajuan Cuti</h1>
+                    <div>
+                        <label>Nama:</label><br/>
+                        <input type="text"/>
+                    </div>
+                    <div>
+                        <label>Jabatan:</label><br/>
+                        <input type="text"/>
+                    </div>
+                    <div>
+                        <label>Jumlah Cuti:</label><br/>
+                        <input type="number"/>
+                    </div>
+                    <div>
+                        <label>Mulai Cuti:</label><br/>
+                        <input type="date"/>
+                    </div>
+                    <div>
+                        <label>Akhir Cuti:</label><br/>
+                        <input type="date"/>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit" />
+                    </div>
+                </form>,
+            document.getElementById("root")
+        );
+    </script>
+</body>
+</html>
