@@ -130,13 +130,13 @@
 
     echo $elang1->serang($harimau1);
     echo $elang1->serang($harimau1);
-    echo $elang1->serang($harimau1);
-    echo $elang1->serang($harimau1); 
+    // echo $elang1->serang($harimau1);
+    // echo $elang1->serang($harimau1); 
     
-    echo "<br><br><br>";
+    // echo "<br><br><br>";
 
     echo $harimau1->serang($elang1);
     echo $harimau1->serang($elang1);
 
-    echo $elang1->atraksi(); 
+    // echo $elang1->atraksi(); 
 ?>

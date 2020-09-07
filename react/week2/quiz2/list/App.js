@@ -2,35 +2,48 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
-const list = [
-  {
-    nama:"Arkan",
-    pekerjaan:"Programmer",
-    hobi: "Coding"
-  },
-  {
-    nama:"Budi",
-    pekerjaan:"Kontraktor",
-    hobi:"Makan"
-  },
-  {
-    nama:"Banu",
-    pekerjaan:"Sales",
-    hobi:"Baca buku"
-  }
-]
+class TampilList extends React.Component{
+  render(){
 
-const listBaru = list.map((value,index)=>{
-  let hasil = <div key={index}><p>Nama:{value.nama}</p><p>Pekerjaan: {value.pekerjaan}</p><p>Hobi: {value.hobi}</p><br/></div>
-  return hasil;
-})
+    const list = this.props.list.map((value)=>{
+      let data=[];
+      for (const key in value) {
+          data.push(<p key={key}>{key} : {value[key]} </p>)
+      }
+      return(
+        <div>{data}<br/></div>
+      )
+    })
+
+    return(
+      <div>{list}</div>
+    )
+  }
+}
 
 class App extends React.Component {
 
   render(){
+    const list = [
+      {
+        nama:"Arkan",
+        pekerjaan:"Programmer",
+        hobi: "Coding"
+      },
+      {
+        nama:"Budi",
+        pekerjaan:"Kontraktor",
+        hobi:"Makan"
+      },
+      {
+        nama:"Banu",
+        pekerjaan:"Sales",
+        hobi:"Baca buku"
+      }
+    ]
     return (
       <div>
-        {listBaru}
+        <TampilList list={list} />
       </div>
     );
   }
